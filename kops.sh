@@ -13,5 +13,5 @@ mv kubectl /usr/local/bin/kubectl
 aws s3api create-bucket --bucket mustafa.project.flm.k8s.local --region us-east-1
 aws s3api put-bucket-versioning --bucket mustafa.project.flm.k8s.local --region us-east-1 --versioning-configuration Status=Enabled
 export KOPS_STATE_STORE=s3://mustafa.project.flm.k8s.local
-kops create cluster --name mustafa.k8s.local --zones us-east-1a,us-east-1b --master-count=1 --master-size t2.large --master-volume-size=30 --node-count=3 --node-size t2.medium --node-volume-size=20
-kops update cluster --name mustafa.k8s.local --yes --admin
+kops create cluster --name chandu.k8s.local --zones us-east-1a,us-east-1b --master-count=1 --master-size c7i-flex.large --master-volume-size=30 --node-count=3 --node-size t3.small --node-volume-size=20
+kops update cluster --name chandu.k8s.local --yes --admin
